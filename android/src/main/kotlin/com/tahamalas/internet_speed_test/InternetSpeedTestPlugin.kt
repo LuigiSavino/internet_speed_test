@@ -55,14 +55,14 @@ public class InternetSpeedTestPlugin(internal var activity: Activity, internal v
 
     fun startListening(args: Any, result: Result, methodName: String, testServer: String) {
         // Get callback id
-        println("testttt")
+        // println("testttt")
         val currentListenerId = args as Int
-        println("testttt")
+        // println("testttt")
         val runnable = Runnable {
             if (callbackById.containsKey(currentListenerId)) {
                 val argsMap: MutableMap<String, Any> = mutableMapOf()
                 argsMap["id"] = currentListenerId
-                println("testttt $currentListenerId")
+                // println("testttt $currentListenerId")
                 when (methodName) {
                     "startDownloadTesting" -> {
                         testDownloadSpeed(object : TestListener {
